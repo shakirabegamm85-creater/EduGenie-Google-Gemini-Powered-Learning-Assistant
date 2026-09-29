@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduGenie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-<div class="container">
-    <h1>EduGenie 🎓</h1>
-    <p>Google Gemini Powered Educational Assistant</p>
 
-    <textarea id="question" placeholder="Ask an educational question..."></textarea>
+    <div class="container">
 
-    <button onclick="askGemini()">Ask EduGenie</button>
+        <h1>EduGenie 🎓</h1>
 
-    <div class="answer">
-        <h2>Answer</h2>
-        <pre id="answer">Your answer will appear here.</pre>
+        <p>Google Gemini Powered Educational Assistant</p>
+
+        <textarea
+            id="question"
+            placeholder="Ask an educational question..."
+            rows="5"></textarea>
+
+        <br><br>
+
+        <button onclick="askGemini()">
+            Ask EduGenie
+        </button>
+
+        <div class="answer">
+            <h2>Answer</h2>
+            <pre id="answer">Your answer will appear here.</pre>
+        </div>
+
     </div>
-</div>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
